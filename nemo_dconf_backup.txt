@@ -1,0 +1,17 @@
+[preferences]
+default-folder-viewer='list-view'
+show-hidden-files=true
+
+[preferences/menu-config]
+background-menu-open-in-terminal=false
+selection-menu-open-in-terminal=false
+
+[search]
+search-reverse-sort=false
+search-sort-column='name'
+
+[window-state]
+geometry='1890x992+12+70'
+maximized=false
+sidebar-bookmark-breakpoint=5
+start-with-sidebar=true

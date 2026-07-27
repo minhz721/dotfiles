@@ -1,0 +1,28 @@
+input {
+    keyboard {
+        xkb {
+            // layout "us,vn"
+            // options "grp:win_space_toggle"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        // dwt
+        // accel-speed 0.2
+    }
+
+    mouse {
+        // natural-scroll
+        // accel-speed 0.2
+    }
+
+    trackpoint {
+        // natural-scroll
+    }
+
+    // warp-mouse-to-focus
+    // focus-follows-mouse max-scroll-amount="0%"
+}

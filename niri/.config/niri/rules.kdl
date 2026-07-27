@@ -1,0 +1,22 @@
+// Output default path
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+// prefer-no-csd
+
+// WezTerm layout workaround
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Picture-in-Picture window rule
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Rounded corners for all windows (Bo góc cửa sổ)
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}

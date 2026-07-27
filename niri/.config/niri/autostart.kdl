@@ -1,0 +1,9 @@
+// Auto-start daemons and apps
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-at-startup "fcitx5" "-d"
+// spawn-at-startup "swaybg" "-i" "/path/to/wallpaper.jpg" "-m" "fill"
+
+hotkey-overlay {
+    // skip-at-startup
+}

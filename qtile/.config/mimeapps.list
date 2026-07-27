@@ -1,0 +1,27 @@
+[Default Applications]
+text/html=thorium-browser.desktop
+x-scheme-handler/http=thorium-browser.desktop
+x-scheme-handler/https=thorium-browser.desktop
+x-scheme-handler/about=thorium-browser.desktop
+x-scheme-handler/unknown=thorium-browser.desktop
+x-scheme-handler/insomnia=insomnia.desktop
+image/jpeg=imv.desktop
+image/webp=imv.desktop
+image/bmp=imv.desktop
+video/x-matroska=mpv.desktop
+video/webm=mpv.desktop
+video/avi=mpv.desktop
+audio/mpeg=mpv.desktop
+video/mp4=mpv.desktop
+image/svg+xml=imv.desktop
+audio/wav=mpv.desktop
+audio/flac=mpv.desktop
+image/tiff=imv.desktop
+application/pdf=org.pwmt.zathura.desktop
+image/gif=imv.desktop
+image/png=imv.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
+
+[Added Associations]
+image/jpeg=imv.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;

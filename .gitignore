@@ -1,0 +1,81 @@
+.DS_Store
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+
+# Cython debug symbols
+cython_debug/
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pytest cache
+.pytest_cache/
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# MyPy, Pyre
+.mypy_cache/
+.pyre/
+
+# Pylint, coverage, etc.
+.coverage
+.cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+*.log
+
+# Distribution
+*.tar.gz
+*.whl
+
+# dotenv
+.env.local
+.env.*
+
+# macOS
+.DS_Store
+
+# Others (optional)
+*.sqlite3
+*.db
+plugged/
+
+
+**/tempCodeRunnerFile.sh
