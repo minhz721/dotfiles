@@ -1,17 +1,27 @@
 { config, pkgs, ... }: {
-  # 1. Target user environment configuration
+  # 1. Import all sub-folders containing raw config setups
+  imports = [
+    ./ghostty
+    # ./zsh
+    ./dunst
+    ./picom
+    ./rofi
+    ./qtile
+  ];
+
+  # 2. Target user profile
   home.username = "leomin";
   home.homeDirectory = "/home/leomin";
 
-  # 2. User-specific packages
+  # 3. Other general packages (without raw configs)
   home.packages = with pkgs; [
     vscode
-    librewolf
+    fish
+    neovim
   ];
 
-  # 3. Programs managed by Home Manager
+  # 4. Enable Home Manager
   programs.home-manager.enable = true;
-
-  # 4. State version for stateful data
+  
   home.stateVersion = "26.05";
 }
