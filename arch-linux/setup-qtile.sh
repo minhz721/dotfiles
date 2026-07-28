@@ -36,7 +36,7 @@ PACKAGES=(
     nemo nemo-fileroller gsimplecal
 
     # --- System Utilities & Media ---
-    gnome-disk-utility polkit-gnome obs-studio ntfs-3g exfatprogs imv pamac-aur dconf-editor qemu-full virt-manager libvirt dnsmasq ebtables iptables-nft mpv cava keyd xclip unzip
+    gnome-disk-utility polkit-gnome obs-studio ntfs-3g exfatprogs imv pamac-aur dconf-editor qemu virt-manager libvirt dnsmasq ebtables iptables-nft mpv cava keyd xclip unzip
 
     # --- Audio (commented out, optional) ---
     pamixer pipewire-alsa pipewire-pulse wireplumber playerctl python-pulsectl-asyncio bluez bluez-utils blueman python-dbus-fast python-dbus-next

@@ -1,0 +1,3 @@
+```
+sudo nixos-generate-config
+```
