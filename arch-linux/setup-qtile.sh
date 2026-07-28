@@ -290,7 +290,7 @@ setup_zsh() {
 
 # Gnu stow config
 stow_configs() {
-    local folders=("ghostty" "kitty" "nvim" "keyd" "qtile" "alacritty")
+    local folders=("ghostty" "nvim" "keyd" "qtile" )
     local config_dir="$HOME/.config"
     local dotfiles_dir="$HOME/dotfiles"
 

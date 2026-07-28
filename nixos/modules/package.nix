@@ -12,12 +12,9 @@
   environment.systemPackages = with pkgs; [
     vim
     git
-    neovim
     ghostty
-    vscode
     btop
     fastfetch
-    fish
     librewolf
   ];
 }
