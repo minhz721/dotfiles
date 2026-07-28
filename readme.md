@@ -74,6 +74,7 @@ Add the following configuration to your system configuration file (usually `/etc
 
   # 3. Enable SPICE agent service for guest optimization
   services.spice-vdagentd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   # 4. Add your user to the libvirt group
   users.users.YOUR_USERNAME = { # Replace YOUR_USERNAME with your actual username
@@ -102,3 +103,4 @@ To enable automatic display resizing and seamless copy-paste between the Host an
 2. **Inside the Virtual Machine (Guest):**
    * **If the Guest is Linux:** Install the `spice-vdagent` package inside that guest OS.
    * **If the Guest is Windows:** Download and install the `virtio-win.iso` drivers or run `spice-guest-tools.exe`.
+   * Run `spice-vdagent -x`

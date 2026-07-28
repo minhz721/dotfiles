@@ -14,8 +14,6 @@ font-family = JetBrainsMono Nerd Font
 cursor-style = block
 
 
-copy-on-select = clipboard
-
 
 # tab navigation
 keybind = ctrl+1=goto_tab:1

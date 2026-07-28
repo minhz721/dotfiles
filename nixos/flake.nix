@@ -1,46 +1,28 @@
 {
-  description = "Hệ thống NixOS hoàn chỉnh cho minhtd (Cả System và Home Manager)";
+  description = "Leomin's Modular NixOS Flake Configuration";
 
   inputs = {
-    # Nhánh unstable để có phần mềm mới như Arch
+    # NixOS official package repository (Using unstable/latest version)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # Home Manager repository
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      # CẤU HÌNH HỆ THỐNG (Dùng cho lệnh: nixos-rebuild switch --flake .#desk)
-      nixosConfigurations."desk" = nixpkgs.lib.nixosSystem {
-        inherit system;
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations = {
+      # This hostname must match your networking.hostName inside network.nix
+      nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
-          /etc/nixos/hardware-configuration.nix # Lấy driver phần cứng gốc của máy mới
-          ./configuration.nix                    # File cấu hình hệ thống từ repo của bạn
+          /etc/nixos/hardware-configuration.nix 
+          ./modules/default.nix
         ];
-      };
-
-      # CẤU HÌNH NGƯỜI DÙNG (Dùng cho lệnh: home-manager switch --flake .#minhtd)
-      homeConfigurations."minhtd" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home.nix ];
-      };
-
-      # Môi trường biệt lập nix-develop tự động để check lỗi Python Qtile
-      devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [
-          (pkgs.python3.withPackages (ps: with ps; [
-            qtile qtile-extras psutil mypy black dbus-fast dbus-next
-          ]))
-        ];
-        shellHook = ''
-          echo "⚡ Đã vào môi trường phát triển Qtile cô lập!"
-          echo "👉 Chạy 'python3 -m py_compile ../qtile/config.py' để test lỗi cú pháp."
-        '';
       };
     };
+  };
 }
