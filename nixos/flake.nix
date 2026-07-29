@@ -38,7 +38,7 @@
         };
 
         modules = [
-          ./hardware-configuration.nix
+          /etc/nixos/hardware-configuration.nix 
           ./configuration.nix
 
           # Tích hợp Home-manager làm một module của NixOS
