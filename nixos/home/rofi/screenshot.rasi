@@ -1,0 +1,111 @@
+/**
+ * Catppuccin Mocha - Full Width 3-Row Screenshot Menu Layout
+ * Feature Set: Expands options to full width without text compression
+ * Theme: Catppuccin Mocha Palette Sync
+ **/
+
+configuration {
+    show-icons:                 false;
+}
+
+/* --- THEME VARIABLES & COLOR PALETTE (Catppuccin Mocha Native) --- */
+* {
+    bg-color:     #1e1e2e; /* Base: Deep Primary Background */
+    bg-accent:    #181825; /* Mantle: Secondary Row Background */
+    fg-color:     #cdd6f4; /* Text: Primary Text Value */
+    accent-color: #b4befe; /* Lavender: Pastel Highlight Component */
+    border-color: #b4befe; /* Lavender: Geometric Edge Border Control */
+}
+
+/* --- SYSTEM WINDOW STRUCTURE --- */
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       550px;           /* Balanced width to prevent row stretching */
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    border:                      2px solid;
+    border-radius:               12px;            /* Sleek rounded corners */
+    border-color:                @border-color;
+    background-color:            @bg-color;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     12px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/* --- INTERACTIVE SEARCH FIELD --- */
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     12px 14px;
+    border-radius:               8px;
+    background-color:            @bg-accent;
+    text-color:                  @fg-color;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @accent-color;
+    font:                        "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    placeholder:                 "Select screen target action...";
+    placeholder-color:           #585b70;          /* Surface 2: Dimmed Placeholder */
+}
+
+/* --- DATA RENDER VIEW --- */
+listview {
+    enabled:                     true;
+    columns:                     1;               /* Forces a single column layout */
+    lines:                       3;               /* Displays exactly 3 horizontal entries */
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     8px;             /* Padding gap between rows */
+    background-color:            transparent;
+    text-color:                  @fg-color;
+}
+
+/* --- SELECTION ELEMENTS --- */
+element {
+    enabled:                     true;
+    orientation:                 horizontal;      /* Natural left-to-right text layout */
+    padding:                     12px 16px;       /* Comfortable row hitboxes */
+    border-radius:               8px;
+    background-color:            @bg-accent;      /* Card-style container rows */
+    text-color:                  @fg-color;
+    cursor:                      pointer;
+}
+
+/* Operational Focused Matrix Status */
+element selected.normal {
+    background-color:            @accent-color;
+    text-color:                  @bg-color;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    font:                        "JetBrainsMono Nerd Font Bold 11";
+    vertical-align:              0.5;
+    horizontal-align:            0.0;             /* Left-align text for natural readability */
+}

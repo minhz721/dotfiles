@@ -3,6 +3,10 @@
   imports = [
     ./ghostty
     # ./zsh
+    ./dunst
+    ./picom
+    ./rofi
+    ./qtile
   ];
 
   # 2. Target user profile
