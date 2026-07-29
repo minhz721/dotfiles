@@ -1,0 +1,81 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 8,
+
+    // Layout
+    "modules-left": [
+        "niri/workspaces",
+        "niri/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "custom/powermenu"
+    ],
+
+    // --- MODULE CONFIGURATIONS ---
+
+    // Niri Workspaces (Cần Waybar phiên bản mới hỗ trợ niri/workspaces)
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "○",
+            "active": "●"
+        }
+    },
+
+    "niri/window": {
+        "format": "{}",
+        "max-length": 40,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": " {:%H:%M   %d/%m/%Y}",
+        "format-alt": " {:%H:%M:%S   %A, %d %B %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        // "format": " {usage}%",
+        "format": "CPU: {usage}%",
+        "interval": 3,
+        "on-click": ""
+    },
+
+    "memory": {
+        "format": "RAM: {used}GB",
+        "interval": 3
+    },
+
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "🔇 Mute",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "custom/powermenu": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/powermenu.sh"
+    }
+}
