@@ -7,6 +7,8 @@
     # ./picom
     # ./rofi
     # ./qtile
+    # ./fuzzel
+    # ./waybar
   ];
 
   # 2. Target user profile
