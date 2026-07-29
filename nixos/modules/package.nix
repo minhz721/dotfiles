@@ -17,5 +17,6 @@
     fastfetch
     librewolf
     sddm-astronaut
+    qtile
   ];
 }
