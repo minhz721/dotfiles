@@ -10,6 +10,6 @@
     ./user.nix
     ./docker.nix
     ./home-manager.nix
-    ./qtile.nix
+    ./niri.nix
   ];
 }
