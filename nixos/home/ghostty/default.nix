@@ -5,3 +5,5 @@
     ".config/ghostty/config".source = ./config;
   };
 }
+
+
