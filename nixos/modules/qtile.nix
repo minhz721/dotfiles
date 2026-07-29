@@ -9,7 +9,6 @@
             qtile-extras
         ];
     };
-
     
 
 }

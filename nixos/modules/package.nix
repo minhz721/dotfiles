@@ -16,7 +16,6 @@
     btop
     fastfetch
     librewolf
-    sddm-astronaut
-    qtile
+    # sddm-astronaut
   ];
 }
