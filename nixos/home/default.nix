@@ -3,10 +3,10 @@
   imports = [
     ./ghostty
     # ./zsh
-    ./dunst
-    ./picom
-    ./rofi
-    ./qtile
+    # ./dunst
+    # ./picom
+    # ./rofi
+    # ./qtile
   ];
 
   # 2. Target user profile
@@ -23,5 +23,5 @@
   # 4. Enable Home Manager
   programs.home-manager.enable = true;
   
-  home.stateVersion = "26.11";
+  home.stateVersion = "26.05";
 }

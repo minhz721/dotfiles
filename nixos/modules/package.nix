@@ -15,7 +15,9 @@
     ghostty
     btop
     fastfetch
+    nemo
     librewolf
+    fuzzel
     # sddm-astronaut
   ];
 }
