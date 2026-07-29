@@ -103,4 +103,11 @@ To enable automatic display resizing and seamless copy-paste between the Host an
 2. **Inside the Virtual Machine (Guest):**
    * **If the Guest is Linux:** Install the `spice-vdagent` package inside that guest OS.
    * **If the Guest is Windows:** Download and install the `virtio-win.iso` drivers or run `spice-guest-tools.exe`.
-   * Run `spice-vdagent -x`
+   * Run `spice-vdagent -x` and add 
+  ```
+services.spice-vdagentd.enable = true;
+services.qemuGuest.enable = true;
+
+systemctl --user enable --now spice-vdagent.service
+
+  ```
