@@ -1,0 +1,71 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = (200, 400)
+    offset = 20x20
+    scale = 0
+    origin = top-right
+    transparency = 10
+    corner_radius = 10
+    gap_size = 8
+    frame_width = 2
+    frame_color = "#b4befe"
+    separator_color = frame
+    font = JetBrainsMono Nerd Font 10
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    word_wrap = yes
+    ignore_newline = no
+    stack_duplicates = true
+    show_indicators = yes
+    indicate_hidden = yes
+    shrink = no
+    padding = 16
+    horizontal_padding = 16
+    text_icon_padding = 8
+    separator_height = 2
+    sort = yes
+    idle_threshold = 120
+    show_age_threshold = 60
+    history_length = 100
+    dmenu = rofi -dmenu -p dunst:
+    browser = xdg-open
+    icon_position = left
+    enable_markup = yes
+    min_icon_size = 32
+    max_icon_size = 64
+    sticky_history = yes
+    title = Dunst
+    class = Dunst
+    fullscreen = show
+    force_xwayland = false
+    script = ~/.config/dunst/scripts/notify-sound.sh
+    icon_path = /usr/share/icons/Papirus/16x16/status:/usr/share/icons/Adwaita/16x16/status:/usr/share/icons/Papirus/48x48/status:/usr/share/icons/Adwaita/scalable/status
+    
+    # Progress bar customization using Catppuccin Mocha palette
+    progress_bar = true
+    progress_bar_frame_width = 1
+    progress_bar_max_height = 10
+    progress_bar_min_height = 6
+    progress_bar_radius = 4
+    canvas_color = "#1e1e2e"
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#585b70"
+    timeout = 3
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#b4befe"
+    timeout = 6
+
+[urgency_critical]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#f38ba8"
+    timeout = 0
