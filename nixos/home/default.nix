@@ -3,10 +3,10 @@
   imports = [
     ./ghostty
     # ./zsh
-    # ./dunst
-    # ./picom
-    # ./rofi
-    # ./qtile
+    ./dunst
+    ./picom
+    ./rofi
+    ./qtile
     # ./fuzzel
     # ./waybar
   ];
