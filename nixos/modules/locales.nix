@@ -35,4 +35,10 @@
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
   };
+
+  # Configure keymap in X11
+    services.xserver.xkb = {
+        layout = "us";
+        variant = "";
+    };
 }
