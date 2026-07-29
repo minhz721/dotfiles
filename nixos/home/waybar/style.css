@@ -1,0 +1,78 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+/* Các block module */
+#workspaces,
+#window,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#tray {
+    background-color: #1e1e2e;
+    padding: 4px 12px;
+    border-radius: 12px;
+    border: 1px solid #313244;
+}
+
+/* Niri Workspaces */
+#workspaces button {
+    padding: 0 5px;
+    color: #6c7086;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #cba6f7;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: transparent;
+}
+
+/* Các module bên phải */
+#clock {
+    color: #89b4fa;
+}
+
+#pulseaudio {
+    color: #f9e2af;
+}
+
+#cpu {
+    color: #a6e3a1;
+}
+
+#memory {
+    color: #94e2d5;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #fab387;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+
+#window {
+    color: #bac2de;
+}
